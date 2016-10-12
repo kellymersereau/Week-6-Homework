@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>TV Show Gif App</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<title>Giphy Search</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Bungee|Roboto:300" rel="stylesheet">
+	<!-- my style sheet -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-	<div id="tvShowButtons">
+	<div class="container">
+		<div class="jumbotron">
+			<h1>GIPHY SEARCH</h1>
+			<br>
+			<p>Enter a type of Giphy in the search box below to add it to the buttons below.  Click on any of the buttons to populate the Giphys below. Once the Giphys populate, you can click on the image to start the Giphy animation and click again to stop the animation.</p>
+		
+			<div class="row">
+			  	<div class="col-md-6 col-md-offset-3">
+				  	<form id="tvShowForm" class="form-inline">
+				    	<div class="form-group form-group-lg">
+					      	<input type="text" class="form-control" id="tvShow-input" placeholder="Search for a Giphy...">
+				      	</div>
+				        <button id="addTVShow" class="btn btn-default btn-lg" type="submit" value="Submit">GO!</button>
+				    </form>
+			  	</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="btn-group" role="group" aria-label="..." id="tvShowButtons">
+				</div>
+			</div>
+		</div>
 	</div>
 
-	<form id="tvShowForm">
 
-		<label for="tvShow-input">Add a TV Show! </label>
-		<input type="text" id="tvShow-input"></input>
-
-		<input id="addTVShow" type="submit" value="Submit"> </input>
-	</form>
-
-	<div id="tvShows">
+	<div id="tvShows" class="row">
 	</div>
 
-<script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
-<script src="assets/javascript/app.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="assets/javascript/app.js"></script>
 </body>
 </html>
