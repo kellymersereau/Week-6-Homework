@@ -39,7 +39,7 @@ $(document).on('click', '.tvShowName', function(){
 
 	var show = $(this).data('name');
 	console.log('show', show);
-	var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + show + "&api_key=dc6zaTOxFJmzC&limit=12&offset=12";
+	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + show + "&api_key=dc6zaTOxFJmzC&limit=12&offset=12";
 
 	$.ajax({
 		url: queryURL,
